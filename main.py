@@ -127,7 +127,6 @@ if show_chart and tickers:
 st.write("---")
 st.caption(f"데이터 소스: Yahoo Finance via yfinance (표시된 가격은 실시간에 가깝지만 데이터 정책에 따라 지연될 수 있음).")
 # auto-refresh using experimental function
-st_autorefresh = st.experimental_singleton(lambda: None)  # placeholder to avoid lint issues
 # Use Streamlit built-in autorefresh
 count = st.experimental_get_query_params().get("refresh_count", [0])
 st.experimental_set_query_params(refresh_count=int(count[0]) + 1 if count else 1)
